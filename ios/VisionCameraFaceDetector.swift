@@ -88,10 +88,15 @@ public class VisionCameraFaceDetector: NSObject, FrameProcessorPluginBase {
 
         let x = frameRect.maxX + offsetX
         let y = frameRect.minY + offsetY
+        
+        let xc = (frameRect.midX + ceil(frameRect.width)) / 2.0
+        let yc = (frameRect.midY + ceil(frameRect.height)) / 2.0
 
         return [
           "x": frameRect.midX + (frameRect.midX - x),
           "y": frameRect.midY + (y - frameRect.midY),
+          "left": xc,
+          "top": yc,
           "width": frameRect.width,
           "height": frameRect.height,
           "boundingCenterX": frameRect.midX,
