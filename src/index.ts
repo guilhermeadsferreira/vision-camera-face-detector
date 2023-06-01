@@ -13,8 +13,10 @@ export interface Face {
   rightEyeOpenProbability: number;
   smilingProbability: number;
   bounds: {
-    y: number;
     x: number;
+    y: number;
+    top: number;
+    left: number;
     height: number;
     width: number;
   };
