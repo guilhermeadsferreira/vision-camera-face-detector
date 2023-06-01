@@ -92,8 +92,6 @@ public class VisionCameraFaceDetector: NSObject, FrameProcessorPluginBase {
         return [
           "x": frameRect.midX + (frameRect.midX - x),
           "y": frameRect.midY + (y - frameRect.midY),
-          "left": frameRect.left,
-          "top": frameRect.top,
           "width": frameRect.width,
           "height": frameRect.height,
           "boundingCenterX": frameRect.midX,
